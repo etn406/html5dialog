@@ -1,0 +1,377 @@
+/* =============================================================================
+   HTML5 Boilerplate CSS: h5bp.com/css ; modifié par Etienne Gauvin
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block }
+[hidden] { display: none }
+
+body { margin: 0; font-size: 1em; line-height: 1.4 }
+::selection { background: #182859; color: white; text-shadow: none }
+
+a { color: #00e }
+a:visited { color: #551a8b }
+a:hover { color: #06e }
+a:focus { outline: 0 }
+a:hover, a:active { outline: 0 }
+
+abbr[title] { border-bottom: 1px dotted }
+b, strong { font-weight: bold }
+blockquote { margin: 1em 40px }
+dfn { font-style: italic }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0 }
+ins { background: #ff9; color: #000; text-decoration: none }
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold }
+pre, code, kbd, samp { font-family: monospace, serif; font-family: 'Courier New', monospace; font-size: 1em }
+pre { white-space: pre; white-space: pre-wrap }
+q { quotes: none }
+q:before, q:after { content: ""; content: none }
+small { font-size: 85% }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline }
+sup { top: -0.5em }
+sub { bottom: -0.25em }
+
+ul, ol { margin: 1em 0; padding: 0 0 0 40px }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0 }
+
+img { border: 0; vertical-align: middle }
+
+figure { margin: 0 }
+form { margin: 0 }
+fieldset { border: 0; margin: 0; padding: 0 }
+label { cursor: pointer }
+legend { border: 0; margin-left: -7px; padding: 0; white-space: normal }
+button, input, select, textarea { font-family: 'Oxygen', sans-serif; font-size: 100%; margin: 0; vertical-align: baseline; vertical-align: middle }
+button, input { line-height: normal }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; overflow: visible }
+button[disabled], input[disabled], command[disabled] { cursor: default }
+input[type="checkbox"], input[type="radio"] { padding: 0; width: 13px; height: 13px }
+
+table { border-collapse: collapse; border-spacing: 0 }
+td { vertical-align: top }
+
+.chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0 }
+
+
+
+/* ===== Primary Styles ========================================================
+   Author: Etienne Gauvin <dev.etienne.gauvin@gmail.com>
+   Bleu:            #73C7EB
+   Bleu sombre:     #267191
+   Orange:          #F74A00
+   Orange sombre:   #DB3E00
+   ========================================================================== */
+
+/* ========================================
+ *  Fonts
+ */
+
+/* ========================================
+ *  Corps
+ */
+
+body {
+    background-color: #E4EEF7;
+    background-image: url("./img/worn_dots.png");
+    font-family: Verdana, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%
+}
+
+#pageWrapper {
+    margin: 0;
+    padding: 0
+}
+
+/* ========================================
+ *  Header
+ */
+
+#header {
+    background-color: #73C7EB;
+    background-image: url("./img/subtle_zebra_3d.png");
+    box-shadow: 0 -1px 5px #267191 inset, 0 1px 5px rgba(0, 0, 0, .1);
+    padding: 0 20%;
+}
+
+#header h1 {
+    color: #F74A00;
+    font-family: 'Bullpen', Impact, Sans-serif;
+    font-style: italic;
+    margin: 0;
+    padding: .2em 0;
+}
+
+#header h1 img {
+    border: 0;
+}
+
+
+/* ========================================
+ *  Dialogues
+ */
+
+#dialogues {
+    margin: 0 auto;
+    padding: 0;
+    width: 64%;
+}
+
+#dialogues > ul {
+    height: 380px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+
+/* ========================================
+ *  Options
+ */
+
+#dialogues > menu {
+    height: 1.8em;
+}
+
+/** Champs de texte en général **/
+
+input[type='text'], input[type='number'] {
+    background-color: white;
+    border: 0;
+    box-shadow: 0 1px .3em rgba(0, 0, 0, .4) inset;
+    border-radius: 3px;
+    color: #444444;
+    height: 22px;
+    padding: 5px .5em 3px;
+}
+
+input[type='number'] {
+    width: 4em
+}
+
+input[type='text']:disabled, input[type='number']:disabled {
+    background: #F6F6F6 url('./img/disabled.png');
+    color: #AAAAAA;
+}
+
+/** Boutons **/
+
+input[type='submit'], input[type='button'], button {
+    background-color: #F74A00;
+    background-position: center center;
+    border: 0;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .5), 0 0 .3em rgba(255, 255, 255, .4) inset;
+    border-radius: 3px;
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 28px;
+    overflow: hidden;
+    padding: 3px .5em 4px;
+}
+
+input[type='submit']:not(:disabled):active, input[type='button']:not(:disabled):active, button:not(:disabled):active {
+    border-bottom: 0;
+	position: relative;
+	top: 1px;
+}
+
+input[type='submit']:disabled, input[type='button']:disabled, button:disabled {
+    background-color: #B5785E;
+    color: #EEEEEE;
+    cursor: default;
+}
+
+/** Labels **/
+
+input:disabled + label, input:disabled + label, button:disabled + label {
+    color: #AAAAAA;
+    cursor: default;
+}
+
+/** Options **/
+
+fieldset#options {
+	display: inline-block;
+    margin: 0 1em;
+    padding: 0;
+}
+
+fieldset#options[hidden] {
+	display: none;
+}
+
+output#server-location {
+    color: grey;
+	display: inline-block;
+    margin-left: 1em;
+    font-style: italic;
+}
+
+/** Champ du message **/
+
+#dialogues form#communication input#message {
+    padding: .2em .5em;
+    width: 88%;
+    min-width: 8em;
+}
+
+#dialogues form#communication input[type='submit'] {
+    padding: .2em .5em;
+    width: 8%;
+    min-width: 5em;
+}
+
+
+/* ========================================
+ *  Conteneur dialogues
+ */
+
+#dialogues > #messagesList {
+    height: 420px;
+    margin: 0 0 1em;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 0
+}
+
+#dialogues > #messagesList > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+#dialogues > #messagesList > ul > li {
+    border-radius: 4px;
+    border-top: 1px dashed #D4D4D4;
+    margin: 0;
+    padding: .3em .6em
+}
+
+/* ========================================
+ *  Types de message
+ */
+
+.critical-error {
+    color: red;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+}
+
+.validation {
+    color: #0F7D00;
+}
+
+.information {
+    color: #005EB0;
+}
+
+
+
+
+
+/* ========================================
+ *  Footer de la page
+ */
+
+#footer {
+    background-color: #73C7EB;
+    background-image: url("./img/subtle_zebra_3d.png");
+    box-shadow: 0 1px 5px #267191 inset, 0 1px 5px rgba(0, 0, 0, .1);
+    height: 3em;
+    margin: 1em 0 0;
+    padding: 0;
+    width: 100%;
+}
+
+#footer ul {
+    color: white;
+    text-shadow: 0 0 3px #267191;
+    height: 3em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#footer ul li {
+    display: inline-block;
+    line-height: 3em;
+    margin: 0 1em;
+    padding: 0;
+}
+
+#footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#footer ul li a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
+
+/* ========================================
+ *  Affichage des erreurs
+ */
+
+.erreur {
+	background-color: #750000;
+	background-color: rgba(117, 0, 0, .8);
+	border: 0;
+	border-radius: 4px;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, .6);
+	color: #FFFFFF;
+	font-family: Georgia, Serif;
+	font-size: 1.1em;
+    height: 48px;
+    line-height: 48px;
+	margin: 0 auto;
+    padding: 0 1em;
+    text-align: center;
+}
+
+/* =============================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+	/* Style adjustments for viewports that meet the condition */
+}
+
+/* =============================================================================
+   Non-Semantic Helper Classes
+   ========================================================================== */
+
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; line-height: 0 }
+.ir br { display: none }
+.hidden { display: none !important; visibility: hidden }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto }
+.invisible { visibility: hidden }
+.clearfix:before, .clearfix:after { content: ""; display: table }
+.clearfix:after { clear: both }
+
+/* =============================================================================
+   Print Styles
+   ========================================================================== */
+ 
+@media print {
+  * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important } /* Black prints faster: h5bp.com/s */
+  a, a:visited { text-decoration: underline }
+  a[href]:after { content: " (" attr(href) ")" }
+  abbr[title]:after { content: " (" attr(title) ")" }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: "" }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid }
+  thead { display: table-header-group } /* h5bp.com/t */
+  tr, img { page-break-inside: avoid }
+  img { max-width: 100% !important }
+  @page { margin: 0.5cm }
+  p, h2, h3 { orphans: 3; widows: 3 }
+  h2, h3 { page-break-after: avoid }
+}

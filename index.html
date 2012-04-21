@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <title>html5dialog</title>
+        <meta charset="utf-8">
+        <!--[if lt IE 9]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+        <meta name="author" content="Étienne Gauvin">
+        <meta name="viewport" content="width=device-width">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="./style.css">
+    </head>
+
+    <body>
+        <div id='pageWrapper'>
+            <!-- Header -->
+            <header id='header'>
+                <h1><img src='./img/header.png' alt='html5dialog' /></h1>
+            </header>
+            
+            <!-- Affichage d'un message pour les utilisateur d'IE < 9 -->
+            <!--[if lt IE 9]><p class=chromeframe>Votre navigateur est <em>vétuste!</em> <a href="http://browsehappy.com/">installez une version plus récente</a> ou <a href="http://www.google.com/chromeframe/?redirect=true">activez Google Chrome Frame</a> pour pouvoir profiter de ce site.</p><![endif]-->
+            
+            <!-- Conteneur principal -->
+            <section id='dialogues'>
+                
+				<!-- Menu des options -->
+				<menu>
+                    <form id='connection'>
+                        <input type='submit' id='connect' value='Connect' title='Connect' disabled />
+                        <input type='button' id='disconnect' value='Disconnect' title='Disconnect' disabled hidden />
+                        
+                        <fieldset id='options'>
+                            <input type='checkbox' id='ssl' name='ssl' disabled />
+                            <label for='ssl'>SSL</label>
+                            <input type='text' id='host' title='Host' name='host' value='localhost:8080' onfocus='$(this).select()' disabled />
+                        </fieldset>
+                        
+                        <output id='server-location'></output>
+                    </form>
+                </menu>
+				
+				<!-- Messages reçus -->
+                <div id='messagesList'>
+                    <ul>
+                        <li class='flash information' style='font-style:italic'><img alt="Loading..." src="./img/loading.png" /> Loading...</li>
+                    </ul>
+				</div>
+				
+				<!-- Formulaire d'envoi de messages -->
+                <form id='communication'>
+                    <input type='text' id='message' name='message' placeholder='Message...' autocomplete='off' disabled /><!--
+                 --><input type='submit' value='Send' disabled />
+                </form>
+            </section>
+            
+            <!-- Pied de page -->
+            <footer id='footer'>
+                <ul>
+                    <li>Application & Design created by <a href='mailto:dev.etienne.gauvin@gmail.com'>Etienne Gauvin</a></li>
+                </ul>
+            </footer>
+        </div>
+        
+        <!-- - - Javascript - - -->
+        <!-- jQuery -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="./js/libs/jquery.min.js"><\/script>')</script>
+        <script src="./js/libs/jquery.cookie.min.js"></script>
+        
+        <!-- Scripts -->
+        <script src="./js/script.js"></script>
+        
+        <!-- Image(s) à précharger -->
+        <img alt='Loading image' rel='prefetch' src='./img/loading.png' style='display:none' />
+        
+    </body>
+</html>
